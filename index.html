@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เข้าสู่ระบบ | Facebook Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308'); /* เปลี่ยนลิงก์ตามต้องการ */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(3px);
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.85); /* พื้นหลังโปร่งแสง */
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      width: 360px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #1877f2;
+      margin-bottom: 1.5rem;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: #145dbf;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>ONE SHOP</h2>
+  <input type="text" id="username" placeholder="อีเมลหรือเบอร์โทรศัพท์">
+  <input type="password" id="password" placeholder="รหัสผ่าน">
+  <button onclick="login()">เข้าสู่ระบบ</button>
+  <div class="error" id="errorMsg"></div>
+</div>
+
+<script>
+  function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMsg = document.getElementById('errorMsg');
+
+    const dummyUser = {
+      username: "user@example.com",
+      password: "123456"
+    };
+
+    if (username === dummyUser.username && password === dummyUser.password) {
+      alert("เข้าสู่ระบบสำเร็จ!");
+      errorMsg.textContent = "";
+    } else {
+      errorMsg.textContent = "ถ้าเเค่นี้ไม่รู้ก็ไม่ต้องเข้าเว็บกู";
+    }
+  }
+</script>
+
+</body>
+</html>
+
